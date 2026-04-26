@@ -178,3 +178,109 @@ for item in items:
         result.append(item)
 print(result)
 
+
+"""Question 11> Print the multiplication table for a given number using a for loop"""
+
+num = int(input("Enter the number: "))
+
+for i in range(1, 11):
+    print(num, "x", i, "=", num * i)
+
+"""Question 12> Calculate the factorial of a number using a while loop"""
+
+num = int(input("Enter the number: "))
+original_num = num
+
+factorial = 1
+
+while num > 1:
+    factorial = factorial * num
+    num = num - 1
+# print("Factorial:", factorial)
+print(f"Factorial {original_num}: {factorial}")
+
+"""Question 13> Check if a list is a palindrome using a for loop"""
+
+list = [1, 2, 3, 2, 1]
+
+is_palindrome = True
+
+for i in range(len(list) // 2):
+    if list[i] != list[len(list) -1 -i]:
+        is_palindrome = False
+        break
+print("Is Palindrome:", is_palindrome) 
+
+"""Question 14> Sort a list of numbers in ascending order using bubble sort with loops"""
+numbers = [64, 34, 25, 12, 22, 11, 90, 75, 80]
+n = len(numbers)
+for i in range(n):
+    for j in range(0, n - i - 1):
+        if numbers[j] > numbers[j+1]:
+           numbers[j], numbers[j + 1] = numbers[j+1], numbers[j]
+print("Sorted list:", numbers)
+
+"""Question 15> Count occurances of each character in a string using a dictionary"""
+
+text = "Pranish"
+count = {}
+for char in text:
+    if char in count:
+        count[char] = char + 1
+    else:
+        count[char] = 1
+print(count)
+
+"""Question 16> Update values in a dictionary based on a condition using for loop."""
+
+marks = {"Pranish": 70, "Gurung": 45, "Rai": 40}
+for student, mark in marks.items():
+    if mark < 50:
+        marks[student] = mark + 5
+print(marks)
+
+"""Question 17> Use nested for loops to print a right-angled triangle pattern of stars."""
+
+rows = 3
+for i in range(1, rows + 1):
+    for j in range(i):
+        print("*", end="")
+    print()
+
+    """
+        rows = 5
+        for i in range(rows, 0, -1):
+            for j in range(i):
+                print("*", end="")
+            print()
+    """
+
+"""Question 18> Convert a list of tuples into a dictionary using a for loop"""
+
+tuples = [("name", "Ram"), ("age", 20), ("city", "Pokhara")]
+result = {}
+for key, value in tuples:
+    result[key] = value
+print(result)
+
+"""Question 19> Find common elements between two lists using a for loop"""
+
+list_1 = [1, 2, 3, 4, 5]
+list_2 = [3, 4, 5, 6, 7]
+common = []
+for item in list_1:
+    if item in list2:
+        common.append(item)
+print(common)
+
+
+"""Question 20> Count the total number of vowesl in a list of strings using a for loop"""
+
+words = ["Apple", "Banana", "Cherry"]
+vowels = "aeiouAEIOU"
+total = 0
+for word in words:
+    for char in word:
+        if char in vowels:
+            total = total + 1
+print("Total vowels:", total)
